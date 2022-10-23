@@ -1,0 +1,211 @@
+=================================================================================
+				BULocalization project
+				Making programs closer to user
+				Documentation
+=================================================================================
+
+Contents:
+	1. About
+		1.1. Required software
+		1.2. License
+	2. Tasks
+		2.1. Creating new localization project
+		2.2. Opening existing project
+		2.3. Testing translation
+		2.4. Coding
+		2.5. Adding new translation
+		2.6. Updating translation
+		2.7. Translation editor related tasks
+			2.7.1. Testing translation
+		2.8. Editing template tasks
+			2.8.1. Initial configuring
+			2.8.2. Setting namespaces
+			2.8.3. Managing items
+	3. Concepts of a project
+
+	FAQ
+
+1. About
+
+	http://www.sourceforge.net/projects/bulocalization
+
+	BULocalization is an alternative solution for localization of .Net programs.
+	Packet consists of program for localization and class library:
+BULocalization manages localizations
+BULocalization.dll for loading language options into your programs
+	
+	1.1. Required software
+
+	Preinstalled software requirements
+	a) for using the bulocalization tool:
+		Microsoft Windows 95+,
+		.Net Framework 2.0.5+
+
+	b) for using the library:
+		mono 1,9,1 or higher required or
+		Microsoft .Net Framework 2,0,5
+
+	1.2. License
+
+	This is a public domain opensource software
+
+2. Tasks
+
+	2.1. Creating new localization project
+
+To create new project go to menu 'Localization Project \ Create New...'. A 'Choose Project Folder' wondow will appear. Here you can type the path of an empty folder or choose it by mouse by pressing on '...' button. 
+If typed path does not exist program will ask if you want it to be created
+
+	2.2. Opening existing project
+
+Here are 3 ways to open project
+a) Press Ctrl + O or
+b) Go to menu 'Localization Project \ Open...' or
+c) Use list of recently opened projects in 'Localization Project \ Recent projects'
+
+	2.3. Testing translation
+
+Prerequirements:
+a) software you're testing translation for should be installed on your PC
+b) you're editing translation file that is a part of this installed version of software
+(if not, you can save your translation, copy file with it to locals folder of installed project and open it again in translation editor)
+
+1. Go to main menu and switch 'Mode' to 'Review'
+In this mode to each translation item id will be added. So you can easily find it in editor to fix
+For example:
+ID: 115: text of translated item
+2. Save it by Ctrl + S
+3. Run software and check if something is wrong and fix translation
+4. Switch 'Mode' back to 'Release' mode
+5. Save it
+
+	2.4. Coding
+
+For examples please see solution Test and TestUi in software folder. 
+
+Some remarks:
+If you want to use default language at first program start, please return 'default'. If you will return string.Empty - select language dialog will appear.
+
+	2.5. Adding new translation
+
+To add new translation please do the next
+1) open localization project
+2) call 'Add...' from context menu or press 'Ctrl + A'
+3) in 'Translation Properties' window please enter name of language of translation in English
+For example: Russian
+
+Done! Now you can ask translator to update the translation
+
+	2.6. Updating translation
+
+To update existing translation please do the next:
+1) open localization project
+2) choose translation you want to update from the list
+3) double-click on it  or 
+call 'Update' from context menu  or
+press on tooltip button with array
+
+Result: 'Translation Editor' window will be opened. For more information please see section 2.7.
+
+	2.7 Translation editor related tasks
+
+In translation editor window from the left side there's a column with 3 types of images. This images represents the state of each translation item:
+a) Red sign means that translation of item is invalid. This item should be updated. If not Ц template version of this item will be used in application;
+b) Pencil means that translation was changed because item was modified in template. This item should be updated. If not Ц template version of this item will be used in application;
+c) Green sign means that all is OK.
+
+Resizing of panels. You can resize form in next places
+a) near 'Text to translate' caption
+b) near 'Translation' caption
+
+Moving through items hint:
+To move through items that should be changed by keyboard you can use
+Shift + Up, Shift + Down
+
+		2.7.1. Testing translation
+
+To test translation please do the next:
+1) open translation in Translation Editor
+2) go to Translation Editor \ Mode \ Review
+3) save
+Note: your contact information will be set to translation!
+4) run binaries of project and check if all items work ok, if not please see id and fix it in editor
+5) Translation Editor \ Mode \ Release
+6) save
+
+Done!
+
+	2.8. Editing template tasks
+	
+General information.
+a) After editing template all translations are automatically updated to fit the new state of template. If you received translation after this and want to upgrade received translation, please press on tooltip button with several arrays or resave default translation
+b) Template should be properly configured
+c) English is the best language for template
+
+To edit template please do the next:
+1) open localization project;
+2) double click on 'default' item or call 'Update...' from context menu on this item
+
+		2.8.1. Initial configuring
+
+Please fill marked with '*' obligatory fields.
+
+1) Open tab 'Options';
+2) Fill group box 'Contact information about translators'
+
+Note: provided e-mail will be used for sending translation back through program or manually;
+url should configure additional contact information for translators
+
+This e-mail and url is the generic feedback information for translators
+
+3) Fill group box 'Translation Template contact information'
+
+Note: purpose of provided e-mail is the feedback for users for the mistakes in translation
+
+Field 'Language' should contain natural language name.
+For example, for English language it's 'English',
+for Russian it's '–усский'
+
+All this configuration may be changed at any time
+
+		2.8.2. Setting namespaces
+
+Purpose of namespaces is to minimize memory usage by grouping language items by namespaces. Usually each separate application uses each own unique namespace.
+
+To set namespaces please switch to 'Namespaces' tab. You can manage namespaces by buttons 'Add', 'Rename', 'Remove' and by context menu
+
+Note: if your're going to delete namespaces with items, such items will not be removed from teplate and will be marked as '<Not set>' and red sign in list on 'Items' tab
+
+		2.8.3. Managing items
+
+You can search, add, remove, set each langugage item
+
+a) adding
+
+Shortcut: 'Ctrl + A'
+
+To simplify adding items option 'Paste text from buffer...' added enabled by defatul. So you can just from source place, switch to this window and press Ctrl + A. In all other cases when you want to set value of item you should press set button from the left from text box.
+
+b) setting
+
+Shortcut: 'Ctrl + S'
+
+Modified but not set items marked with star
+Left column contains state images of each item
+
+c) searching
+
+Shortcut: 'Ctrl + F'
+
+Additional functions available from context menu on items list:
+a) copy id or source text to clipboard
+
+3. Concepts of a project
+
+This solution designed for program packages and libraries. Each separate project should have unique namespace associated with it. Each namespace has several language items linked with it
+
+FAQ
+
+Q: How to upgrade locals from version 3 to 4
+A: Download 1.7 version and install it; go to the Bulocalization tools bin directory; run tool update3to4; follow instructions in tool. Since 2,0 version this tool included as sources only. So you can just compile it(SharpDevelop and .net 2 SDK required)
+

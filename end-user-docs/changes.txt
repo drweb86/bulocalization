@@ -1,0 +1,6 @@
+Improvments:
+1. Bug with Ctrl+F in change template dialog fixed
+2. Add new language issue with focusing control fixed
+3. BULocalization library - bug fixes
+(a) Languages now are sorted by their name
+(b) <Project> - Choose Language -> Choose Language - <Project>

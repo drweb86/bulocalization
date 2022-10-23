@@ -1,0 +1,172 @@
+﻿Iteration 2
+
+Bugs
+
+Testing report
+
+[FIXED]
+1) About dialog - > incorrect version showing
+[FIXED]
+2) Modify translation -> Tools
+[FIXED]
+3) About -> to the end of list
+[FIXED]
+4) icons for languages
+[DONE]
+5) Remove for namespaces backcolor
+[DONE]
+6) add new namespace - OK button is available
+[FIXED]
+7) Rename - Enter new name_:_ Remove from caption
+-> Please enter new name for namespace '{0}'
+[FIXED]
+8) Options
+[FIXED]
+E-mail * _- -> _*
+[FIXED]
+Site * ...
+-=Default language=-
+[FIXED]
+9) replace icon for '+' on new one
+[FIXED]
+10) replace icon for '-' on new one
+[FIXED]
+11) Search dialog for 'Search' replace with lupa icon
+[FIXED]
+12) tab switching on 'Search' dialog
+[DONE]
+13) Please replace 'change default language' on listview
+with 'id' and 'message'
+[DONE]
+14) Remove + Context menu on list view with it
+[REJECTED]
+15) multiple selection for deletion
+
+[MOVED TO i3]
+16) color for listview in Main Form and in to change default language list view item
+[MOVED TO i3]
+17) usage 'change default language'
+* choose by namespace list view
+* deletion of namespaces
+- remove items
+- move to other namespace 
+- mark as unknown
+
+[DONE]
+18) remove 'ID=dddd' from
+[DONE]
+19) add shortcuts
+'Ctrl+A' - to add new item
+[DONE]
+20) menu to listviews
+
+=========================================
+BUTranslation testing
+=========================================
+[MOVED TO i3]
+1) BUTranslate - ListView issues
+a) color should be default and be configured in options
+
+[FIXED]
+b) icons for translation items should be changed
+[FIXED]
+c) 'settings' -> Tools->Settings
+
+[MOVED TO i3]
+2) 'Settings Form'
+a) Cancel
+b) Some parts of this information
+
+[FIXED]
+c) smtp host panel is invisible in the end
+d) icon missing for form
+[FIXED]
+e) default colors for all dialogs
+[FIXED]
+3) MessageBox.Show - issue with pressing button
+[FIXED]
+4) Keys management
+a) using shortcuts fix - not all of them are working
+[FIXED]
+5) Send form
+a) Icon is missing
+[FIXED]
+6) Search dialog
+a) Icon
+[FIXED]
+7) Validation - is always enabled - remove it!
+[REJECTED]
+8) clicking with left button does not work
+[FIXED]
+9) About message refactor
+======================================================================
+
+b) code review for BULocalization
+SupportManager
+[FIXED]
+a) do not catch generic exceptions
+[FIXED]
+b) public static void OpenUrl(string linkOrProcess, string parameter)
+public static void OpenTranslation(string linkOrProcess, string parameter)
+[FIXED]
+c) 		static public void SupportRequest()
+		{
+			Open(SupportRequestURL);
+		}
+		
+		static public void FeatureRequest()
+		{
+			Open(FeatureRequestURL);
+		}
+		
+		static public void ReportABug()
+		{
+			Open(ReportABugURL);
+		}
+		
+		static public void VisitHomepage()
+		{
+			Open(VisitHomepageURL);
+		}
+		change to -> Enum
+
+Settings
+
+[REJECTED]
+a) 	internal readonly string DefaultTemplateFile;
+		internal readonly string HelpFile;
+		internal readonly string SettingsFile;
+		internal readonly string LanguageEditorFile;
+		
+	move to separate static class
+BULocalization refactoring
+[DONE]
+a) remove BULocalization.Language -> Language
+[DONE]
+b) Language -> class
+[DONE]
+c) Refactor 
+
+InnoSetup install scrypt
+
+Move all related bugs to Tracker
+
+[FIXED]
+10) Links bugs
+
+==================================== bugs linked with new functional ==================
+[workarounded: showing id in the caption]
+a) 'cdl' when added item is selected it is not viewable(should be scrolled)
+[MOVED TO i3]
+b) when language edited - list of languges isn't reloaded
+[FIXED]
+c) when showing help about translation mode in butranslate an 'Error' occurs
+==================================== using issues ==================
+[MOVED TO i3]
+a) write letter to translator
+mailto: dddd
+[MOVED TO i3]
+b) BUTranslate
+mailto: dddd ddd using own email client
+[FIXED]
+c) cannot resize TranslationsList|| translation windows in BUTranslate

@@ -1,0 +1,23 @@
+﻿[DONE]
+1. Copy e-mail context menu tiem create and remove such column
+
+[DONE]
+2. Remove 'Update' default translation and make it autodetect what item to update
+on double click
+
+[DONE]
+3. Open Create project - create form with ability to paste path
+
+Bugs
+[FIXED]
+1. When dialogs are closed - main window in background
+[FIXED]
+2. Open with param bug in butranslation
+[FIXED]
+3. 'Update selected item' is always active
+[FIXED]
+4. Bug with caption of BULocalization
+[FIXED]
+5. When 'Modify' called - window occurrs in second time only
+[FIXED]
+6. When 'solutionprojecttextbox' is empty 'OK' is active

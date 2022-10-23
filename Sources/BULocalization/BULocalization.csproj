@@ -1,0 +1,172 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A0BCB0C3-EF0D-4AA1-9081-F74D01BC025F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BULocalization</RootNamespace>
+    <AssemblyName>BULocalization</AssemblyName>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ApplicationIcon>Images\ApplicationIcon.ico</ApplicationIcon>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Сергей\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\bin-debug</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\bin</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddModifyLanguage.cs" />
+    <Compile Include="AddModifyLanguage.Designer.cs">
+      <DependentUpon>AddModifyLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppController.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ChangeDefaultLanguage.cs" />
+    <Compile Include="ChangeDefaultLanguage.Designer.cs">
+      <DependentUpon>ChangeDefaultLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\BULanguages.cs" />
+    <Compile Include="Core\BULanguagesManager.cs" />
+    <Compile Include="Core\BUTranslation.cs" />
+    <Compile Include="Core\CommonTranslationException.cs" />
+    <Compile Include="Core\DialogsUtil.cs" />
+    <Compile Include="Core\EnterValueForm.cs" />
+    <Compile Include="Core\EnterValueForm.Designer.cs">
+      <DependentUpon>EnterValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\LanguageInfo.cs" />
+    <Compile Include="Core\Mailer.cs" />
+    <Compile Include="Core\OpenFolderForm.cs" />
+    <Compile Include="Core\OpenFolderForm.Designer.cs">
+      <DependentUpon>OpenFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\SearchForm.Designer.cs" />
+    <Compile Include="Core\SupportManager.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsForm.cs" />
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SenderForm.cs" />
+    <Compile Include="SenderForm.Designer.cs">
+      <DependentUpon>SenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranslationEditor\EmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranslationEditor\EmailForm.Designer.cs">
+      <DependentUpon>EmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranslationEditor\LocalizationController.cs" />
+    <Compile Include="TranslationEditor\LocalizationEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranslationEditor\LocalizationEditorForm.Designer.cs">
+      <DependentUpon>LocalizationEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranslationEditor\TranslationConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranslationEditor\TranslationConfigurationForm.Designer.cs">
+      <DependentUpon>TranslationConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddModifyLanguage.resx">
+      <DependentUpon>AddModifyLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDefaultLanguage.resx">
+      <DependentUpon>ChangeDefaultLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\EnterValueForm.resx">
+      <DependentUpon>EnterValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\OpenFolderForm.resx">
+      <DependentUpon>OpenFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SenderForm.resx">
+      <DependentUpon>SenderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslationEditor\EmailForm.resx">
+      <DependentUpon>EmailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslationEditor\LocalizationEditorForm.resx">
+      <DependentUpon>LocalizationEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslationEditor\TranslationConfigurationForm.resx">
+      <DependentUpon>TranslationConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Development Documentation\Iteration 1.txt" />
+    <None Include="Development Documentation\Iteration 2.txt" />
+    <None Include="Development Documentation\Iteration 3.txt" />
+    <None Include="Development Documentation\Iteration 4.txt" />
+    <None Include="Development Documentation\RequirementsForDevelopment.txt" />
+    <None Include="Images\Add.png" />
+    <None Include="Images\ApplicationIcon.ico" />
+    <None Include="Images\EmailAll.PNG" />
+    <None Include="Images\ErrorState.PNG" />
+    <None Include="Images\Language.PNG" />
+    <None Include="Images\ModifiedState.PNG" />
+    <None Include="Images\Modify.PNG" />
+    <None Include="Images\ModifySmall.PNG" />
+    <None Include="Images\OkState.PNG" />
+    <None Include="Images\Remove.png" />
+    <None Include="Images\Search.PNG" />
+    <None Include="Images\SearchSmall.PNG" />
+    <None Include="Images\Set.PNG" />
+    <None Include="Images\UpgradeTranslations.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Development Documentation" />
+    <Folder Include="Images" />
+    <Folder Include="Core" />
+    <Folder Include="TranslationEditor" />
+  </ItemGroup>
+</Project>

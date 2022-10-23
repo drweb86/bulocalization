@@ -1,0 +1,7 @@
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\bin\Debug\BULocalization.dll
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\bin\Debug\BULocalization.pdb
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\obj\Debug\BULocalization.ChooseLanguages.resources
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\obj\Debug\BULocalization.csproj.GenerateResource.Cache
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\obj\Debug\BULocalization.dll
+E:\Work\BULocalization\BULocalization\Sources\LibraryAndSamples\BULocalization\obj\Debug\BULocalization.pdb

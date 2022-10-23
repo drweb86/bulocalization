@@ -1,0 +1,299 @@
+﻿From i2
+
+[DONE]
+1) color for listview in Main Form and in to change default language list view item
+[->i4]
+2) usage 'change default language'
+* choose by namespace list view
+
+[DONE]
+- mark as unknown
+[REJECTED]
+3) BUTranslate - ListView issues
+a) color should be default and be configured in options
+[DONE]
+4) 'Settings Form'
+	a) Cancel
+	b) Some parts of this information
+[FIXED]
+5) when language edited - list of languges isn't reloaded
+[DONE]
+6) write letter to translator
+mailto: dddd
+
+[->i4]
+7) BUTranslate and bulka
+emailing setting using own e-mail client should remove internal mailing!
+mailto: dddd ddd using own email client
+
+Plan
+
+[DONE]
+1) Remove as a separate project BUTranslate and unite all functions
+[DONE]
+2) Unite common settings
+[->i4]
+3) InnoSetup install scripts
+[DONE]
+1) create folder if it is not exists in folder selection dialog
+[FIXED]
+2) doubkle click on namespace to rename it
+[FIXED]
+3) when no item selected 'Set' is available but does not work
+- it should be disabled and there must be no info about item shown
+[FIXED]
+4) after deletion information is still available on editing of default langugeage editr tab
+[DONE]
+5) remove 'Delete' from toolbar in default langugeage editr tab
+Move it to the right of listbox
+[DONE]
+6) when clicking on Lupa search dialog is not activated - in bulocalization and in butranslation
+[DONE]
+7) галочку на изображение ввода поменять в default langugeage editr tab
+и расположить его не сверху я рядом с textbox-ом справа
+[DONE]
+8) too much place on id column
+[DONE]
+9) copy id menu item
+[DONE]
+10) remove add button and move it right place
+[DONE]
+11) the same with search button
+[DONE]
+12) purpose of copy to clipboard in default langugeage editr tab
+[REMOVED]
+13) purpose of copy to clipboard in butranslation
+[FIXED]
+14) required fields in Options should be empty for new translation because user can skip reading documentation
+and if he will not set them - translator will not know where to send his translation
+[DONE]
+15) Copy to context menu of items in default langugeage editr tab
+[IMPLEMENTED]
+[NOT REPRODUCED]
+16) deletion namespace - cannot define if lang item has assigned namespace or no
+[NOT REPRODUCED]
+17) critical bug: possible : deletion of items without namespace!
+[DONE]
+18) Ctrl+F does not work
+[FIXED]
+19) BUTranslation: When text exchanged on nothing - state is ok, but should be disabled
+[REJECTED: no context menu, no need]
+20) Selection in DataGridView with right mouse click does not work
+[DONE]
+21) Implemetation of Shift Up/Down issue: it should be 
+to items that need to be updated or corrected but it goes 
+straight to the next item
+[NOT REPRODUCED]
+22) Dialogs problems - when on close button on question to choose 'Cancel ' focus changes to other form
+[FIXED]
+23) When to set first time last item and press Shift Up, Shift Down - it isn't set
+[FIXED]
+24) Dialogs 'suffixes'
+Save as... - it is not in use any more
+'translation' - remove from all subitems
+Load from file-> Open...
+[FIXED]
+25) Search button size -> Close button size
+[DONE]
+26) Change icons for settings request
+[REJECTED]
+27) Dialog for errors request
+[FIXED]
+28) during deletion of namespace n_id in items is not cleared
+[DONE]
+29) change default language: выделение картинкой тех item-ов у которых не назначен namespace
+[DONE]
+30) при изменении item-а помечать в заголовке его звездочкой пока пользователь не сохранит его
+[IMPLEMENTED]
+31) в ManagerbehaviourSettings нужно добавить перегруженный конструктор
+со всеми параметрами, которые так вручную приход устанавливается
+[REJECTED]
+32) левые файлы в каталоге приложения
+[FIXED]
+33) caption on settings is invalid
+34) verification does not work at all
+[FIXED]
+35. арефакторь эту хрень с настройками и попереименовывай их на нормальные имена
+[НЕ ВОСПРОИЗВОДИТСЯ]
+36. некорректно открывается меню модификации перевода - оно должно быть контекстным и инэйблиться в зависимости от того выбрано ли что-нибудь и что выбрано
+[НЕ ВОСПРОИЗВОДИТСЯ]
+37. некорректно энейбляться иконки модификации первеода
+[НЕ ВОСПРОИЗВОДИТСЯ]
+38. даже если нет других переводов - вопрос послать ли перевод все равно задается
+[FIXED]
+39. enter on settings form closes form
+[FIXED]
+40. On close translation editor - main form hides
+[FIXED]
+41. On 'Cancel' on saving window hides
+[FIXED]
+42. implementation of set first item as selected has fuckung stupid idiot bugs
+[FIXED]
+43. Remove old functions from butranslation
+[FIXED]
+44. Ui tab issues in both settings forms
+[FIXED]
+45. in the first time when ui loaded item not set
+[FIXED]
+46. пустые item-ы помечаются при переводе как ошибочные
+[FIXED]
+47. не сохраняется при сохранении через меню
+[FIXED]
+48. файлы с информацией debug должны удаляться
+[NOT REPRODUCIBLE]
+49. если закрыть первое окно без выбора пути - программа остается в памяти и невидима
+[FIXED]
+50. by defaullt editing in edl available and checkbox position is invalid
+[DONE]
+51. неудобно каждый раз при редактировании выбирать первый из списка - напрягает
+autoinsert should be by default enabled
+
+
+=========================================== FxCop verification =============================
+Verified and fixed all issues in ChangeDefaultLanguage
+
+=========================================== Code Review #3 =================================
+appl code guide line(partial)
+[FIXED]
+1. Please fix all non code guide line issues for  ChangeDefaultLanguage
+
+=========================================== Functional testing =============================
+[FIXED]
+1. System.Exception: Empty localization producer e-mail
+   at BULocalization.Core.BUTranslation.SaveToFile(String file) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\Core\BUTranslation.cs:line 458
+   at BULocalization.ChangeDefaultLanguage.save() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\ChangeDefaultLanguage.cs:line 131
+   at BULocalization.ChangeDefaultLanguage.saveButtonClick(Object sender, EventArgs e) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\ChangeDefaultLanguage.cs:line 277
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at BULocalization.AppController.UpdateTemplateTranslation() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\AppController.cs:line 86
+   at BULocalization.MainForm.changeDefaultTranslationHelper() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 195
+   at BULocalization.MainForm.modifySelectedLanguage() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 222
+   at BULocalization.MainForm.languageItemsListViewDoubleClick(Object sender, EventArgs e) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 418
+   at System.Windows.Forms.Control.OnDoubleClick(EventArgs e)
+   at System.Windows.Forms.ListView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at BULocalization.MainForm.Main() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 28
+[REJECTED: namespaces are case-sensitive]
+2. It is allowed to add namespaces with different casing
+e.g. program and Program
+[FIXED]
+3. Deleting namespace question does not contain the name of deleting namespace
+[FIXED]
+4.
+System.Exception: Empty language list
+   at BULocalization.Core.BUTranslation.SaveToFile(String file) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\Core\BUTranslation.cs:line 539
+   at BULocalization.ChangeDefaultLanguage.save() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\ChangeDefaultLanguage.cs:line 139
+   at BULocalization.ChangeDefaultLanguage.saveButtonClick(Object sender, EventArgs e) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\ChangeDefaultLanguage.cs:line 295
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+[FIXED]   
+5. Object Disposed Exception on sending form
+[FIXED]
+6. If select <Not set> namespace, default button is still available
+[FIXED]
+7. If delete namespaces, add one namespace, add language item
+"Namespace not set" error occurs
+[FIXED]
+8. Change template translation -> Translation Template
+[FIXED]
+9. Current translation information -> Translation Template contact information
+[FIXED]
+10. Search dialog resizing problem
+[DONE]
+11. Support calls and opening files calls 
+please make them all working in threadWorker - program hangs up!
+[FIXED]
+12. butr
+Mode\Help - invalid plain text message
+[FIXED]
+13. Send failure form resizing issue
+Caption issue
+$project_name still is not supported
+[FIXED]
+14. From 'address' issue
+[FIXED]
+15. tabs on cdl form issue
+[FIXED]
+16. On creating new project
+a) support state = on
+b) on adding new translation
+BULocalization.Core.CommonTranslationException: Empty localization producer e-mail
+   at BULocalization.Core.BUTranslation.SaveToFile(String file) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\Core\BUTranslation.cs:line 454
+   at BULocalization.AppController.AddNewLanguage() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\AppController.cs:line 304
+   at BULocalization.MainForm.addNewLanguage() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 114
+   at BULocalization.MainForm.AddToolStripMenuItemClick(Object sender, EventArgs e) in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 355
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at BULocalization.MainForm.Main() in d:\Work\BULocalization\BULocalization\Sources\BULocalization\MainForm.cs:line 28
+[FIXED]
+17. butr - it does not save last edited item on save
+[FIXED]
+18. cannot save if 1 item only
+[FIXED]
+19. BUTranslation text
+[FIXED]
+20. SendTo, Search should end on postfix - BUlcoalization
+[FIXED]
+21. Deploy issue
+Naming of config files does not allow to use it at home
+[FIXED]
+22. Use case issue
+column text should resize! on changing form
+
+

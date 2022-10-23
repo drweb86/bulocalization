@@ -1,0 +1,7 @@
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\bin\Debug\Test.exe
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\bin\Debug\Test.pdb
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\bin\Debug\BULocalization.dll
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\bin\Debug\BULocalization.pdb
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\obj\Debug\Test.exe
+D:\Work\BULocalization\BULocalization\Sources\Library\Test\obj\Debug\Test.pdb

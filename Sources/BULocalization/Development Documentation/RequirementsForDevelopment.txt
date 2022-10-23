@@ -1,0 +1,15 @@
+﻿Core tasks:
+
+1. Development requires usage of svn Turtoise SVN(due to SharpDevelop issues with IDE and rename tools)
+
+2. All versions are to be backuped with ZipSolution tool on flash device and synced with home
+
+3. Iterations should be stored too.
+
+[REJECTED]
+4. Implementation of refactoring requires to be in a separate branches
+It is obligatory when CSharpBULocalization or ui refactored
+[i4-DONE]
+5. Move all documentation to txt file
+[i4-DONE]
+6. Update samples and clarify them

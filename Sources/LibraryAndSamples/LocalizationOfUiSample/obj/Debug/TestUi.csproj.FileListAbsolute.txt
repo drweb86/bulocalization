@@ -1,0 +1,9 @@
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\bin\Debug\TestUi.exe
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\bin\Debug\TestUi.pdb
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\bin\Debug\BULocalization.dll
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\bin\Debug\BULocalization.pdb
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\obj\Debug\TestUi.MainForm.resources
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\obj\Debug\TestUi.csproj.GenerateResource.Cache
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\obj\Debug\TestUi.exe
+D:\Work\BULocalization\BULocalization\Sources\Library\TestUi\obj\Debug\TestUi.pdb

@@ -1,0 +1,37 @@
+﻿From i3
+
+1) usage 'change default language'
+* choose by namespace list view
+
+2) BUTranslate and bulka
+emailing setting using own e-mail client should remove internal mailing!
+mailto: dddd ddd using own email client
+
+4) не иформативен заголовок письма. Должен быть таким
+Translation on $translation_english_name of project $project_name changed
+
+5) InnoSetup install scripts
+
+[DONE]
+[CORE-5] мануалка должна быть одна и в txt
+
+[DONE]
+[CORE-6] update and clarify samples
+
+[DONE]
+неудобно каждый раз включать автовставку
+
+[FIXED]
+Ctrl+F does not call search dialog in ct-m in several places
+
+[FIXED]
+ChooseLanguageBox issue
+Caption should be cho lang - projName
+
+[FIXED]
+Add new language dialog box issue: text box is not selected
+
+buloca lib: absence of doc with file
+
+[FIXED]
+choose lang, manu: sorting absence!

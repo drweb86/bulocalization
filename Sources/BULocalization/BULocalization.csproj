@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectGuid>{A0BCB0C3-EF0D-4AA1-9081-F74D01BC025F}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -15,6 +15,13 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <ApplicationIcon>Images\ApplicationIcon.ico</ApplicationIcon>
     <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Сергей\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>..\..\bin-debug</OutputPath>
@@ -39,6 +46,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <Reference Include="System" />
@@ -48,13 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddModifyLanguage.cs" />
+    <Compile Include="AddModifyLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddModifyLanguage.Designer.cs">
       <DependentUpon>AddModifyLanguage.cs</DependentUpon>
     </Compile>
     <Compile Include="AppController.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ChangeDefaultLanguage.cs" />
+    <Compile Include="ChangeDefaultLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ChangeDefaultLanguage.Designer.cs">
       <DependentUpon>ChangeDefaultLanguage.cs</DependentUpon>
     </Compile>
@@ -63,13 +80,17 @@
     <Compile Include="Core\BUTranslation.cs" />
     <Compile Include="Core\CommonTranslationException.cs" />
     <Compile Include="Core\DialogsUtil.cs" />
-    <Compile Include="Core\EnterValueForm.cs" />
+    <Compile Include="Core\EnterValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Core\EnterValueForm.Designer.cs">
       <DependentUpon>EnterValueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\LanguageInfo.cs" />
     <Compile Include="Core\Mailer.cs" />
-    <Compile Include="Core\OpenFolderForm.cs" />
+    <Compile Include="Core\OpenFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Core\OpenFolderForm.Designer.cs">
       <DependentUpon>OpenFolderForm.cs</DependentUpon>
     </Compile>
@@ -79,15 +100,21 @@
     <Compile Include="Core\SearchForm.Designer.cs" />
     <Compile Include="Core\SupportManager.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="SettingsForm.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SenderForm.cs" />
+    <Compile Include="SenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SenderForm.Designer.cs">
       <DependentUpon>SenderForm.cs</DependentUpon>
     </Compile>
@@ -143,6 +170,7 @@
     <EmbeddedResource Include="TranslationEditor\TranslationConfigurationForm.resx">
       <DependentUpon>TranslationConfigurationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Development Documentation\Iteration 1.txt" />
     <None Include="Development Documentation\Iteration 2.txt" />
     <None Include="Development Documentation\Iteration 3.txt" />
@@ -163,10 +191,5 @@
     <None Include="Images\Set.PNG" />
     <None Include="Images\UpgradeTranslations.PNG" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Development Documentation" />
-    <Folder Include="Images" />
-    <Folder Include="Core" />
-    <Folder Include="TranslationEditor" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
